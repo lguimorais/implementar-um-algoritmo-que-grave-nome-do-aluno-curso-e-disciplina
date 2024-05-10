@@ -5,6 +5,7 @@ FILE *arquivo;
 char nome[20];
 char curso[20];
 char disciplina[20];
+int i;
 void algoritmo()
 {
 
@@ -18,17 +19,21 @@ void algoritmo()
         printf("arquivo encontrado com sucesso\n");
         system("pause");
         system("cls");
-        printf("informe seu nome:\n");
-        scanf("%s", &nome);
-        printf("informe seu curso:\n");
-        scanf("%s", &curso);
-        printf("informe a materia:\n");
-        scanf("%s", &disciplina);
-        fprintf(arquivo, "o nome do aluno e:%s\n", nome);
-        fprintf(arquivo, "a disciplina e:%s\n", disciplina);
-        fprintf(arquivo, "o curso e:%s\n", curso);
+        for (i = 0; i < 5; i++)
+        {
+            printf("informe seu nome:\n");
+            scanf("%s", &nome);
+            printf("informe seu curso:\n");
+            scanf("%s", &curso);
+            printf("informe a materia:\n");
+            scanf("%s", &disciplina);
+            fprintf(arquivo, "o nome do aluno e:%s\n", nome);
+            fprintf(arquivo, "a disciplina e:%s\n", disciplina);
+            fprintf(arquivo, "o curso e:%s\n", curso);
+            fprintf(arquivo, "|_____________________________________|\n");
+            system("pause");
+        }
         fclose(arquivo);
-        system("pause");
     }
 }
 int main()
@@ -50,4 +55,5 @@ int main()
         printf("%s", linha);
     }
     fclose(arquivo);
+    system("pause");
 }
