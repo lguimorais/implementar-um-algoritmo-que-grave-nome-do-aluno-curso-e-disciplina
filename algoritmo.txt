@@ -1,0 +1,3 @@
+o nome do aluno e:tua
+a disciplina e:boa
+o curso e:mae
